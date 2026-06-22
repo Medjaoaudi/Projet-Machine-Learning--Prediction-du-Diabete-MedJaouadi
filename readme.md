@@ -1,3 +1,77 @@
+# Projet Machine Learning — Prédiction du Diabète
+
+Résumé
+-------
+Ce projet implémente une chaîne complète de machine learning pour prédire la survenue du diabète à partir du jeu de données Pima Indians Diabetes (fichier `diabetes.csv`). Le notebook principal `Projet_ML_Diabete.ipynb` contient l'analyse exploratoire, le prétraitement, l'entraînement de modèles, l'optimisation et une interface de prédiction interactive.
+
+Points forts
+-----------
+- EDA et nettoyage : remplacement des valeurs impossibles, imputation conditionnée par la classe.
+- Feature engineering : catégories d'IMC, d'âge et de glycémie.
+- Standardisation et split train/test stratifié.
+- Comparaison de plusieurs modèles (Logistic Regression, KNN, SVM, Random Forest, Gradient Boosting).
+- Optimisation des hyperparamètres via GridSearchCV (Gradient Boosting).
+- Visualisations : matrices de corrélation, importance des variables, ROC, matrices de confusion.
+
+Contenu du dépôt
+----------------
+- [Projet_ML_Diabete.ipynb](Projet_ML_Diabete.ipynb) — notebook principal (analyse complète et pipeline).
+- [diabetes.csv](diabetes.csv) — jeu de données (Pima Indians Diabetes).
+
+Installation et exécution
+------------------------
+Prérequis : Python 3.8+ et pip.
+
+1. Créez un environnement virtuel (optionnel mais recommandé) :
+
+```
+python -m venv .venv
+.venv\Scripts\Activate.ps1  # PowerShell
+```
+
+2. Installez les dépendances :
+
+```
+pip install -r requirements.txt
+```
+
+3. Ouvrez et exécutez le notebook `Projet_ML_Diabete.ipynb` avec JupyterLab ou VS Code.
+
+Fichier `requirements.txt` (si absent)
+-----------------------------------
+Si vous n'avez pas de `requirements.txt`, les principales dépendances sont :
+
+```
+numpy
+pandas
+matplotlib
+seaborn
+scikit-learn
+# (optionnel) jupyterlab
+```
+
+Usage
+-----
+- Exécutez les cellules du notebook dans l'ordre. Les sections sont :
+  1) Chargement et EDA
+  2) Détection des anomalies
+  3) Prétraitement et feature engineering
+  4) Entraînement et comparaison des modèles
+  5) Optimisation (GridSearch)
+  6) Évaluation finale et visualisations
+  7) Prédiction interactive (entrées manuelles)
+
+Contribuer
+----------
+Ouvert aux améliorations : meilleure imputation, pipelines scikit-learn, tests unitaires, sauvegarde du modèle entraîné (`joblib`/`pickle`) et API légère pour servir les prédictions.
+
+Licence
+-------
+Choisissez une licence (par ex. MIT) et ajoutez un fichier `LICENSE` si vous souhaitez partager ce projet publiquement.
+
+Contact
+-------
+Pour toute question : ouvrez une issue sur le dépôt GitHub ou contactez l'auteur.
 # 🩺 Prédiction du Diabète — Machine Learning
 
 Un projet de classification binaire qui prédit si un patient est diabétique ou non, à partir du dataset [Pima Indians Diabetes](https://www.kaggle.com/datasets/uciml/pima-indians-diabetes-database).
